@@ -20,8 +20,6 @@ public class Herbs : MonoBehaviour
     {
      
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-
-       
         transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
     }
 }

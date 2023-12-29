@@ -16,7 +16,7 @@ public class Spawn : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(2f, 5f));
+            yield return new WaitForSeconds(Random.Range(SMINT, SMAXT));
             SpawnHerbs();
         }
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+
+   
     private Rigidbody2D rb;
     public float speed = 5f;
     public float dash = 5f;
@@ -11,7 +13,8 @@ public class Move : MonoBehaviour
     private Vector2 dir = Vector2.zero;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
