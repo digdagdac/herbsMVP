@@ -216,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 169936161}
+  - component: {fileID: 169936162}
   m_Layer: 0
   m_Name: "\uB300\uAE30\uC11D3"
   m_TagString: Untagged
@@ -238,6 +239,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 303573561}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &169936162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169936160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21659c97456b83a4a8c9db60d703b9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herbArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &171345628
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347541922}
   - component: {fileID: 347541921}
+  - component: {fileID: 347541923}
   m_Layer: 0
   m_Name: SpawnHerb
   m_TagString: Untagged
@@ -467,6 +485,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &347541923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347541920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79179a54db59aec40a4f2a1fd0e6b850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPoints:
+  - {fileID: 541590287}
+  - {fileID: 1651963863}
+  - {fileID: 169936162}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541590286}
+  - component: {fileID: 541590287}
   m_Layer: 0
   m_Name: "\uB300\uAE30\uC11D1"
   m_TagString: Untagged
@@ -719,6 +754,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1758236293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541590287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541590285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21659c97456b83a4a8c9db60d703b9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herbArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &545453399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,8 +1201,8 @@ GameObject:
   - component: {fileID: 1049855822}
   - component: {fileID: 1049855821}
   m_Layer: 0
-  m_Name: player
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,6 +1221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dash: 5
+  pickupRange: 1.5
 --- !u!50 &1049855822
 Rigidbody2D:
   serializedVersion: 4
@@ -1363,6 +1415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1212376304}
   - component: {fileID: 1212376305}
+  - component: {fileID: 1212376306}
   m_Layer: 0
   m_Name: "\uD654\uC0B4\uD45C_5"
   m_TagString: Untagged
@@ -1437,6 +1490,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1212376306
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212376303}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &1360561969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1651963862}
+  - component: {fileID: 1651963863}
   m_Layer: 0
   m_Name: "\uB300\uAE30\uC11D2"
   m_TagString: Untagged
@@ -1670,6 +1769,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1155181999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651963863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651963861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21659c97456b83a4a8c9db60d703b9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herbArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1758236292
 GameObject:
   m_ObjectHideFlags: 0
