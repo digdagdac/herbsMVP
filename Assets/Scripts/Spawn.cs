@@ -7,6 +7,7 @@ public class Spawn : MonoBehaviour
     //public GameObject targetPointsObject;
     public Herbs[] herbs;
     public Transform[] targetPoints; //뺑뻉이 돌리려면 static선언
+    public Transform[] endPoints;
     public float SMINT = 2f;
     public float SMAXT = 5f;
 

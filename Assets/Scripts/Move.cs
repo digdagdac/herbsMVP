@@ -11,10 +11,12 @@ public class Move : MonoBehaviour
     public float speed = 5f;
     public float dash = 5f;
 
+    public Herbs carriedHerb;
+
     private Vector2 dir = Vector2.zero;
 
-
-    // Start is called before the first frame update
+    
+    
     void Start()
     {   
         sp = GetComponent<SpriteRenderer>();
@@ -25,7 +27,26 @@ public class Move : MonoBehaviour
     void Update()
     {
         HandleMovementInput();
- 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (carriedHerb !=null)
+            {
+                carriedHerb.isMoving = false;
+                carriedHerb.PickUp();
+            }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+           
+            if (carriedHerb != null)
+            {
+                carriedHerb.isMoving = true;
+                carriedHerb.DropHerb();
+
+                Debug.Log("³õ±â");
+            }
+        }
 
     }
     void HandleMovementInput()
@@ -50,15 +71,14 @@ public class Move : MonoBehaviour
         }
     }
     
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Herb"))
-        {
-            Herbs herb = other.GetComponent<Herbs>(); 
-            if (herb != null ) 
+        
+            Herbs collidedHerb = collision.gameObject.GetComponent<Herbs>();
+            if (collidedHerb != null)
             {
-                herb.isCarried= true;
+                carriedHerb = collidedHerb;
             }
-        }
+        
     }
 }

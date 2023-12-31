@@ -103,6 +103,11 @@ MonoBehaviour:
   spawnProbability: 30
   speed: 5
   isMoving: 1
+  isCarried: 0
+  targetPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &-6117816526126198741
 BoxCollider2D:
   m_ObjectHideFlags: 0
