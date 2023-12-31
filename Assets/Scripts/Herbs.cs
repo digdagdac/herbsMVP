@@ -133,6 +133,8 @@ public class Herbs : MonoBehaviour
             {
                 targetPoint = collidedHerbArray;
                 targetPoint.AddHerb(this);
+                
+                this.speed = 0;
             }
             else
             {
