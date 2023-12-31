@@ -17,7 +17,7 @@ public class Herbs : MonoBehaviour
 
     public bool isCarried = false;
 
-    private int index;
+
 
     private HerbArray targetPoint;
     
@@ -55,7 +55,7 @@ public class Herbs : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        if (targetPoint.IsFull())
+        if (targetPoint != null && targetPoint.IsFull())
         {
 
             SetTargetPosition(originalPosition, targetPoint);// 초기위치로 돌아오는거
@@ -115,7 +115,7 @@ public class Herbs : MonoBehaviour
             Transform randomTarget = spawn.targetPoints[Random.Range(0, spawn.targetPoints.Length)];
 
 
-            SetTargetPosition(randomTarget.position, null);
+            SetTargetPosition(randomTarget.position, targetPoint);
             isMoving = true;
         }
 

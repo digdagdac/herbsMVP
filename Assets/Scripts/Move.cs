@@ -41,7 +41,7 @@ public class Move : MonoBehaviour
            
             if (carriedHerb != null)
             {
-                carriedHerb.isMoving = true;
+                
                 carriedHerb.DropHerb();
 
                 Debug.Log("³õ±â");
