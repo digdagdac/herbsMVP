@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6230717983601242232}
   - component: {fileID: -7913218265505308405}
   - component: {fileID: -1745682643030863340}
+  - component: {fileID: 4780907650200155129}
   m_Layer: 0
   m_Name: herb1
   m_TagString: Herb
@@ -104,10 +105,6 @@ MonoBehaviour:
   speed: 5
   isMoving: 1
   isCarried: 0
-  targetPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!61 &-7913218265505308405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +177,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4780907650200155129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687077707776088883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0bf54abe85c4c4d8b190056ecf9bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotitem: {fileID: 1183624382518977866, guid: b6c522ff41e3c464ca35242e848d99c4, type: 3}
