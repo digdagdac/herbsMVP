@@ -25,6 +25,7 @@ public class HerbArray : MonoBehaviour
             if (herbArray[i] == null)
             {
                 herbArray[i] = herb;
+
                 return;
             }
         }

@@ -75,52 +75,53 @@ public class Herbs : MonoBehaviour
         }
     }
 
-    public void PickUp()
-    {
-        isCarried = true;
-        GameObject player = GameObject.Find("Player");
-        if (player != null)
-        {
-            Move playerScript = player.GetComponent<Move>();
+    //public void PickUp()
+    //{
+    //    isCarried = true;
+    //    GameObject player = GameObject.Find("Player");
+    //    if (player != null)
+    //    {
+    //        Move playerScript = player.GetComponent<Move>();
            
               
-            transform.SetParent(player.transform);
+    //        transform.SetParent(player.transform);
 
-            isCarried = true;
+    //        isCarried = true;
 
-            GetComponent<Collider2D>().enabled = false;
+    //        GetComponent<Collider2D>().enabled = false;
 
                 
 
         
-        }
-    }
-    public void DropHerb()
-    {
+    //    }
+    //}
+
+    //public void DropHerb()
+    //{
 
 
-        if (isCarried)
-        {
+    //    if (isCarried)
+    //    {
           
-            transform.SetParent(null);
+    //        transform.SetParent(null);
 
            
-            isCarried = false;
+    //        isCarried = false;
 
           
-            GetComponent<Collider2D>().enabled = true;
+    //        GetComponent<Collider2D>().enabled = true;
 
-            Spawn spawn = FindObjectOfType<Spawn>();
+    //        Spawn spawn = FindObjectOfType<Spawn>();
 
-            Transform randomTarget = spawn.targetPoints[Random.Range(0, spawn.targetPoints.Length)];
-
-
-            SetTargetPosition(randomTarget.position, targetPoint);
-            isMoving = true;
-        }
+    //        Transform randomTarget = spawn.targetPoints[Random.Range(0, spawn.targetPoints.Length)];
 
 
-    }
+    //        SetTargetPosition(randomTarget.position, targetPoint);
+    //        isMoving = true;
+    //    }
+
+
+    //}
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "tang")
@@ -134,7 +135,7 @@ public class Herbs : MonoBehaviour
                 targetPoint = collidedHerbArray;
                 targetPoint.AddHerb(this);
                 
-                this.speed = 0;
+                
             }
             else
             {

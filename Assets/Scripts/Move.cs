@@ -33,7 +33,7 @@ public class Move : MonoBehaviour
             if (carriedHerb !=null)
             {
                 carriedHerb.isMoving = false;
-                carriedHerb.PickUp();
+                //carriedHerb.PickUp();
             }
         }
         if (Input.GetMouseButtonDown(1))
@@ -42,7 +42,7 @@ public class Move : MonoBehaviour
             if (carriedHerb != null)
             {
                 
-                carriedHerb.DropHerb();
+                //carriedHerb.DropHerb();
 
                 Debug.Log("³õ±â");
             }
