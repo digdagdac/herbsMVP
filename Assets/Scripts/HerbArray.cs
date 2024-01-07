@@ -25,6 +25,22 @@ public class HerbArray : MonoBehaviour
             if (herbArray[i] == null)
             {
                 herbArray[i] = herb;
+                herb.speed = 0f;
+                switch (i)
+                {
+                    case 0:
+                        herb.transform.position = new Vector2(transform.position.x - 1f, transform.position.y+2f);
+                        break;
+                    case 1:
+                        herb.transform.position = new Vector2(transform.position.x, transform.position.y+2f);
+                        break;
+                    case 2:
+                        herb.transform.position = new Vector2(transform.position.x + 1f, transform.position.y + 2f);
+                        break;
+                    default:
+                        break;
+                }
+                  
 
                 return;
             }
