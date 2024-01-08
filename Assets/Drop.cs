@@ -21,7 +21,7 @@ public class Drop : MonoBehaviour
         {
             string HerbName = inventory.slots[curindex].slotObj.transform.GetChild(0).name;
             Debug.Log(HerbName);
-            ReSpown = new Vector2(this.transform.position.x + 1, this.transform.position.y);
+            ReSpown = new Vector2(this.transform.position.x + 1, this.transform.position.y);//바라보는방향에따라 이거 나중에해야지...
             
             switch (HerbName)
             {

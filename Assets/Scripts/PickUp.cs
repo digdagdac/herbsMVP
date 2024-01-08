@@ -9,18 +9,29 @@ public class PickUp : MonoBehaviour
     {
         if (collision.tag.Equals("Player"))
         {
-            Inventory inven = collision.GetComponent<Inventory>();
-            for(int i = 0; i < inven.slots.Count; i++)
+            if (Move.LeftClick)
             {
-                if (inven.slots[i].isEmpty)
+                Inventory inven = collision.GetComponent<Inventory>();
+                Move player = collision.GetComponent<Move>();
+                for (int i = 0; i < inven.slots.Count; i++)
                 {
-                    Instantiate(slotitem, inven.slots[i].slotObj.transform, false);
-                    inven.slots[i].isEmpty = false;
-                    Drop.curindex++;
-                    Destroy(this.gameObject);
-                    break;
+                    if (inven.slots[i].isEmpty)
+                    {
+
+                        Instantiate(slotitem, inven.slots[i].slotObj.transform, false);
+                        inven.slots[i].isEmpty = false;
+                        Move.curindex++;
+                        Destroy(this.gameObject);
+                        Move.LeftClick = false;
+                        break;
+
+
+
+
+                    }
                 }
             }
+            
             
         }
     }

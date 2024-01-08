@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 559581312579227403}
   - component: {fileID: -6117816526126198741}
   - component: {fileID: 5963925624157115132}
-  - component: {fileID: -6601081860537047305}
+  - component: {fileID: -1579019932050693365}
   m_Layer: 0
   m_Name: herb3
   m_TagString: Herb
@@ -177,7 +177,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6601081860537047305
+--- !u!114 &-1579019932050693365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

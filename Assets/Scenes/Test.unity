@@ -1380,7 +1380,6 @@ GameObject:
   - component: {fileID: 1049855821}
   - component: {fileID: 1049855825}
   - component: {fileID: 1049855826}
-  - component: {fileID: 1049855827}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1403,6 +1402,13 @@ MonoBehaviour:
   speed: 5
   dash: 5
   carriedHerb: {fileID: 0}
+  herbs:
+  - {fileID: 6230717983601242232, guid: b54587601463ea14babb07bbf3f646cc, type: 3}
+  - {fileID: 2951975822842157541, guid: ee594ae814d19ff488522b0d6966ed5c, type: 3}
+  - {fileID: 559581312579227403, guid: d8c4a07fbe8129e4c9a03a2305f6a0f7, type: 3}
+  - {fileID: 6143385003098786279, guid: 231e6a25497177f479f2d753f755da06, type: 3}
+  - {fileID: 7843550274987845634, guid: 80cc4481585f2364aaa59d2a1481b651, type: 3}
+  slotitem: {fileID: 0}
 --- !u!50 &1049855822
 Rigidbody2D:
   serializedVersion: 4
@@ -1556,24 +1562,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots: []
   slotPrefab: {fileID: 794492896134240736, guid: 10650da392aab7d4384d9ff1fe5af4f9, type: 3}
---- !u!114 &1049855827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049855820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b69df416b31aa40b8ef5803daf6cd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  herbs:
-  - {fileID: 6230717983601242232, guid: b54587601463ea14babb07bbf3f646cc, type: 3}
-  - {fileID: 2951975822842157541, guid: ee594ae814d19ff488522b0d6966ed5c, type: 3}
-  - {fileID: 559581312579227403, guid: d8c4a07fbe8129e4c9a03a2305f6a0f7, type: 3}
-  - {fileID: 6143385003098786279, guid: 231e6a25497177f479f2d753f755da06, type: 3}
-  - {fileID: 7843550274987845634, guid: 80cc4481585f2364aaa59d2a1481b651, type: 3}
 --- !u!1 &1155181998
 GameObject:
   m_ObjectHideFlags: 0

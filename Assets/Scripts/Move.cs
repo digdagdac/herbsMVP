@@ -15,12 +15,20 @@ public class Move : MonoBehaviour
 
     private Vector2 dir = Vector2.zero;
 
-    
-    
+    public static int curindex = -1;
+    Inventory inventory;
+    public Herbs[] herbs;
+    private Vector2 ReSpown;
+    private int spownNum=1;
+
+    public GameObject slotitem;
+
+    public static bool LeftClick = false;
     void Start()
     {   
         sp = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();        
+        inventory = GameObject.Find("Player").GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -32,21 +40,51 @@ public class Move : MonoBehaviour
         {
             if (carriedHerb !=null)
             {
-                carriedHerb.isMoving = false;
-                //carriedHerb.PickUp();
+
+                //    carriedHerb.isMoving = false;
+                //    //carriedHerb.PickUp(); 여기에 함수넣어서 처리하기
+                LeftClick= true;
+
             }
+            
         }
         if (Input.GetMouseButtonDown(1))
         {
-           
-            if (carriedHerb != null)
-            {
-                
-                //carriedHerb.DropHerb();
+            string HerbName = inventory.slots[curindex].slotObj.transform.GetChild(0).name;
+            Debug.Log(HerbName);
+            ReSpown = new Vector2(this.transform.position.x + spownNum, this.transform.position.y);//바라보는방향에따라 이거 나중에해야지...
 
-                Debug.Log("놓기");
+            switch (HerbName)
+            {
+                case "Herb1Img(Clone)":
+                    Instantiate(herbs[0], ReSpown, Quaternion.identity);
+                    break;
+                case "Herb2Img(Clone)":
+                    Instantiate(herbs[1], ReSpown, Quaternion.identity);
+                    break;
+                case "Herb3Img(Clone)":
+                    Instantiate(herbs[2], ReSpown, Quaternion.identity);
+                    break;
+                case "Herb4Img(Clone)":
+                    Instantiate(herbs[3], ReSpown, Quaternion.identity);
+                    break;
+                case "Herb5Img(Clone)":
+                    Instantiate(herbs[4], ReSpown, Quaternion.identity);
+                    break;
+                default:
+                    break;
             }
+            Destroy(inventory.slots[curindex].slotObj.transform.GetChild(0).gameObject);
+            curindex--;
+            if (curindex >= inventory.slots.Count)
+            {
+                curindex = 0;
+            }
+
+
+            
         }
+
 
     }
     void HandleMovementInput()
@@ -56,10 +94,12 @@ public class Move : MonoBehaviour
         if (dir.x < 0)
         {
             sp.flipX = false;
+            spownNum = -1;
         }
         else if (dir.x > 0)
         {
             sp.flipX = true;
+            spownNum = +1;
         }
         if (dir != Vector2.zero)
         {
@@ -80,5 +120,7 @@ public class Move : MonoBehaviour
                 carriedHerb = collidedHerb;
             }
         
+
     }
+
 }
