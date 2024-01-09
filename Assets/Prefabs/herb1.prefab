@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   herbsPrefab: {fileID: 8687077707776088883}
   spawnProbability: 10
-  speed: 5
+  speed: 0.5
   isMoving: 1
   isCarried: 0
 --- !u!61 &-7913218265505308405
