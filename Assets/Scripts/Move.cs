@@ -126,7 +126,8 @@ public class Move : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(carriedHerb==null)
+        {
             Herbs collidedHerb = collision.gameObject.GetComponent<Herbs>();
             if (collidedHerb != null)
             {
@@ -134,9 +135,11 @@ public class Move : MonoBehaviour
                 SpriteOutline spriteOutline = carriedHerb.GetComponent<SpriteOutline>();
                 if (spriteOutline != null)
                 {
-                spriteOutline.UpdateOutline(true);
+                    spriteOutline.UpdateOutline(true);
                 }
+            }
         }
+            
             
             
     }

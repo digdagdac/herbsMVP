@@ -67,7 +67,7 @@ public class Herbs : MonoBehaviour
         }
         else
         {
-            
+            Transform targetPointTransform = targetPoints[Random.Range(0, targetPoints.Length)];
             Vector2 newTargetPosition = new Vector2(targetPoint.transform.position.x, targetPoint.transform.position.y + 2);
             SetTargetPosition(newTargetPosition, targetPoint);
             isMoving = true;
