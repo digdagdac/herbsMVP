@@ -20,8 +20,8 @@ public class PickUp : MonoBehaviour
 
                         Instantiate(slotitem, inven.slots[i].slotObj.transform, false);
                         inven.slots[i].isEmpty = false;
-                        Move.curindex++;
-                        Destroy(this.gameObject);
+                        //Move.curindex++;
+                        //Destroy(this.gameObject);
                         Move.LeftClick = false;
                         break;
 

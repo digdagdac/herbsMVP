@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2421738523646977264}
   - component: {fileID: -7690172063366654901}
   - component: {fileID: -8341596403381126402}
+  - component: {fileID: -2120042354934263256}
   m_Layer: 0
   m_Name: herb2
   m_TagString: Herb
@@ -56,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d6326dcdcd2f5d445ae4805c4d446195, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   herbsPrefab: {fileID: 1908919483374701071}
   spawnProbability: 20
-  speed: 0.5
+  speed: 2
   isMoving: 1
   isCarried: 0
 --- !u!61 &2421738523646977264
@@ -190,3 +191,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotitem: {fileID: 3726994577738176973, guid: deb242947e9b51b48a383d8c179a041c, type: 3}
+--- !u!114 &-2120042354934263256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908919483374701071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e60b5d549a9bec42b17a040218a1e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0, b: 0, a: 1}
+  outlineSize: 5

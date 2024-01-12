@@ -17,6 +17,7 @@ public class Herbs : MonoBehaviour
 
     public bool isCarried = false;
 
+    public Transform[] targetPoints;
 
 
     private HerbArray targetPoint;
@@ -67,7 +68,7 @@ public class Herbs : MonoBehaviour
         else
         {
             
-            Vector3 newTargetPosition = new Vector3(targetPoint.transform.position.x, targetPoint.transform.position.y + 2, targetPoint.transform.position.z);
+            Vector2 newTargetPosition = new Vector2(targetPoint.transform.position.x, targetPoint.transform.position.y + 2);
             SetTargetPosition(newTargetPosition, targetPoint);
             isMoving = true;
             
