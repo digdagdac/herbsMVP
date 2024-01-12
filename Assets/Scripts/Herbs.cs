@@ -17,12 +17,15 @@ public class Herbs : MonoBehaviour
 
     public bool isCarried = false;
 
-    public Transform[] targetPoints;
+    public GameObject[] targetPoints;
 
 
     private HerbArray targetPoint;
-    
 
+    public void Start()
+    {
+        targetPoints = GameObject.FindGameObjectsWithTag("tang");
+    }
     public void SetTargetPosition(Vector2 target, HerbArray targetPoint)
     {
         originalPosition = transform.position;
@@ -67,9 +70,11 @@ public class Herbs : MonoBehaviour
         }
         else
         {
-            Transform targetPointTransform = targetPoints[Random.Range(0, targetPoints.Length)];
-            Vector2 newTargetPosition = new Vector2(targetPoint.transform.position.x, targetPoint.transform.position.y + 2);
-            SetTargetPosition(newTargetPosition, targetPoint);
+            Transform targetPointTransform = targetPoints[Random.Range(0, targetPoints.Length)].transform;
+            HerbArray targetPoint = targetPointTransform.GetComponent<HerbArray>();
+
+            SetTargetPosition(targetPointTransform.position, targetPoint);
+            
             isMoving = true;
             
             //targetPoint.AddHerb(this); //허브 넣기
